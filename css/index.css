@@ -21,7 +21,6 @@ body {
   padding-top: 50px;
   padding-bottom: 10px;
   font-size: 75px;
-  font-weight: bold;
   line-height: 32px;
   letter-spacing: -1px;
   text-align: center;
@@ -63,7 +62,7 @@ a.bttn-lg {
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Raleway", serif;
-  font-weight: 400;
+  font-weight: 300;
   color: #ffffff;
   text-align: center;
   transition: all 0.2s;
