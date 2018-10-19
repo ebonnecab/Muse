@@ -22,17 +22,13 @@ nav ul a {
 .container {
     padding: 1em;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "a a a"
-                         "b b b";
-}
-
-.container>div {
-    padding: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "a e"
+                         "b f"
+                         "c g"
+                         "d h"
+    
 }
 
 .section1 {
@@ -41,4 +37,28 @@ nav ul a {
 
 .section2 {
     grid-area: b;
+}
+
+.section3 {
+    grid-area: c;
+}
+
+.section4 {
+    grid-area: d;
+}
+
+.section5{
+    grid-area: e;
+}
+
+.section6{
+    grid-area: f;
+}
+
+.section7{
+    grid-area: g;
+}
+
+.section8{
+    grid-area: h;
 }
