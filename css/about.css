@@ -1,16 +1,26 @@
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
 .nav-bar {
   display: flex;
   justify-content: center;
   width: 100%;
   z-index: 10;
   padding: 10px;
-  background-color: yellow;
+  
 
 }
 
 nav ul a {
-  font-family: "Raleway", serif;
-  font-weight: normal;
+  font-family: "Roboto", serif;
+  font-weight: bold;
   color: black;
   font-size: 17px;
   list-style-type: none;
@@ -22,10 +32,10 @@ nav ul a {
 .container {
   padding: 1em;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "a b"
-                       "c d";
+  
 }
 
 .container>div {
@@ -36,17 +46,171 @@ nav ul a {
 }
 
 .section1{
-  grid-area: a;
-}
-
-.section2{
-  grid-area: b;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  justify-self: center;
 }
 
 .section3{
-  grid-area: c;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  justify-self: center;
 }
 
 .section4{
-  grid-area: d;
+   grid-column-start: 1;
+   grid-column-end: -1;
+   justify-self: center;
+}
+
+.module .section4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section4 h3{
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  color: #708090;
+  letter-spacing: 0.1em;
+}
+
+.section4 p{
+  
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 20px;
+  padding: 1em;
+  padding-top: 0.2em;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 75%;
+
+}
+
+.module .section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section1 p {
+  padding: 1em;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 20px;
+  width: 75%;
+  line-height: 25px;
+}
+
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+a.bttn-lg {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.2em solid #429FCA;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  transition: all 0.2s;
+  
+}
+
+a.bttn-lg:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+@media all and (max-width: 30em) {
+  a.bttn-lg {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+
+
+svg {
+  display: block;
+  font: 10.5em 'Josefin Sans', sans-serif;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #FACC43;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #429FCA;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+  stroke:#EB4839;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #25BEA0;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #8A2B33;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+.module .section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section4 img{
+  width: 100%;
+  object-fit: contain;
+  background-repeat:no-repeat;
+  background-size:cover;
+
+}
+
+img.rounded-corners{
+  border-radius: 50% 0 50% 50%;
 }
