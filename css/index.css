@@ -2,13 +2,14 @@ html {
   box-sizing: content-box;
   padding: 10px;
   margin: 10px auto;
+  height: auto;
 }
 
 body {
   width: 100%;
   height: auto;
   margin: auto;
-  padding: 10px;
+  padding: 0;
   background: url(../media/mic.jpg) no-repeat center center fixed;
   background-size: cover;
 }
